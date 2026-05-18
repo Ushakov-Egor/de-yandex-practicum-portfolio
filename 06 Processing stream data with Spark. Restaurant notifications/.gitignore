@@ -1,0 +1,10 @@
+# секреты — не коммитить
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Spark checkpoints
+/tmp/

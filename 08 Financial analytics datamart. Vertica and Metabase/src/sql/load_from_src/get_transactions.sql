@@ -1,0 +1,1 @@
+SELECT * FROM {table_name} WHERE CAST(transaction_dt AS DATE) = CAST(%(load_date)s AS DATE);

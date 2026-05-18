@@ -1,0 +1,1 @@
+SELECT * FROM {table_name} WHERE date_update = %(load_date)s;

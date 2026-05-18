@@ -1,0 +1,1 @@
+COPY {table_name} FROM STDIN DELIMITER '|' NULL '\\N'

@@ -1,0 +1,37 @@
+replicaCount: 1
+
+image:
+  repository: cr.yandex/crpj3iasc4936bcftfp0/dds_service
+  pullPolicy: IfNotPresent
+  tag: "v2026-04-18-r1"
+
+containerPort: 5000
+
+config:
+  KAFKA_HOST: "rc1b-dp8gi6b5rbek4lt4.mdb.yandexcloud.net"
+  KAFKA_PORT: "9091"
+  KAFKA_CONSUMER_USERNAME: "producer_consumer"
+  KAFKA_CONSUMER_PASSWORD: "cluster-password"
+  KAFKA_CONSUMER_GROUP: "dds-service-consumer"
+  KAFKA_SOURCE_TOPIC: "stg-service-orders"
+  KAFKA_DESTINATION_TOPIC: "dds-service-orders"
+
+  PG_WAREHOUSE_HOST: "rc1b-9ja2lhq939m6vv0e.mdb.yandexcloud.net"
+  PG_WAREHOUSE_PORT: "6432"
+  PG_WAREHOUSE_DBNAME: "sprint9dwh"
+  PG_WAREHOUSE_USER: "db_user"
+  PG_WAREHOUSE_PASSWORD: "1029_superuser"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
